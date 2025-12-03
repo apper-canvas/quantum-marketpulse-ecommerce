@@ -106,37 +106,58 @@ const OrderConfirmation = () => {
               </div>
             </div>
           </div>
-
-          {/* Order Items */}
+{/* Order Items */}
           <div className="mb-8">
-            <h3 className="text-lg font-bold font-display text-secondary mb-4">
-              Items Ordered
+            <h3 className="text-lg font-bold font-display text-secondary mb-4 flex items-center">
+              <ApperIcon name="Package" className="mr-2 text-primary" size={20} />
+              Items Ordered ({order.items.length})
             </h3>
             
             <div className="space-y-4">
-              {order.items.map((item) => (
-                <div key={item.productId} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+              {order.items.map((item, index) => (
+                <motion.div
+                  key={item.productId}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + index * 0.05 }}
+                  className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
+                >
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-16 object-cover rounded-lg"
+                    className="w-18 h-18 object-cover rounded-xl"
                   />
                   
-                  <div className="flex-1 space-y-1">
-                    <h4 className="font-medium font-body text-secondary">
+                  <div className="flex-1 space-y-2">
+                    <h4 className="font-semibold font-body text-secondary text-lg">
                       {item.name}
                     </h4>
-                    <div className="text-sm text-gray-600">
-                      Quantity: {item.quantity} × ${item.price.toFixed(2)}
+                    
+                    <div className="flex items-center space-x-4 text-sm text-gray-600">
+                      <div className="flex items-center space-x-1">
+                        <ApperIcon name="Hash" size={14} />
+                        <span>Qty: {item.quantity}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <ApperIcon name="DollarSign" size={14} />
+                        <span>${item.price.toFixed(2)} each</span>
+                      </div>
+                    </div>
+                    
+                    <div className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full inline-block">
+                      Estimated delivery: {new Date(order.estimatedDelivery).toLocaleDateString()}
                     </div>
                   </div>
                   
                   <div className="text-right">
-                    <div className="font-bold font-body text-lg">
+                    <div className="font-bold font-body text-xl text-primary">
                       ${(item.price * item.quantity).toFixed(2)}
                     </div>
+                    <div className="text-sm text-gray-500">
+                      Subtotal
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

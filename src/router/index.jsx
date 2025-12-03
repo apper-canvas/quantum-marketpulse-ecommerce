@@ -7,6 +7,7 @@ const Home = lazy(() => import("@/components/pages/Home"));
 const ProductDetail = lazy(() => import("@/components/pages/ProductDetail"));
 const Checkout = lazy(() => import("@/components/pages/Checkout"));
 const Orders = lazy(() => import("@/components/pages/Orders"));
+const OrderDetail = lazy(() => import("@/components/pages/OrderDetail"));
 const OrderConfirmation = lazy(() => import("@/components/pages/OrderConfirmation"));
 const Categories = lazy(() => import("@/components/pages/Categories"));
 const Wishlist = lazy(() => import("@/components/pages/Wishlist"));
@@ -43,9 +44,13 @@ const mainRoutes = [
     path: "orders",
     element: <Suspense fallback={SuspenseFallback}><Orders /></Suspense>
   },
-  {
+{
     path: "order-confirmation/:id",
     element: <Suspense fallback={SuspenseFallback}><OrderConfirmation /></Suspense>
+  },
+  {
+    path: "orders/:id",
+    element: <Suspense fallback={SuspenseFallback}><OrderDetail /></Suspense>
   },
   {
 path: "categories",
