@@ -1,0 +1,303 @@
+[
+  {
+    "Id": 1,
+    "name": "iPhone 15 Pro Max",
+    "category": "Electronics",
+    "price": 1199,
+    "description": "The most advanced iPhone yet with titanium design, A17 Pro chip, and professional camera system.",
+    "images": [
+      "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1695048071536-204febb2dad4?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.8,
+    "stock": 25,
+    "specifications": {
+      "Display": "6.7-inch Super Retina XDR",
+      "Chip": "A17 Pro",
+      "Storage": "256GB",
+      "Camera": "48MP Main + 12MP Ultra Wide + 12MP Telephoto",
+      "Battery": "Up to 29 hours video playback"
+    }
+  },
+  {
+    "Id": 2,
+    "name": "MacBook Air M2",
+    "category": "Electronics",
+    "price": 1099,
+    "description": "Supercharged by M2 chip, featuring a larger 13.6-inch Liquid Retina display and advanced camera.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.7,
+    "stock": 15,
+    "specifications": {
+      "Chip": "Apple M2",
+      "Memory": "8GB unified memory",
+      "Storage": "256GB SSD",
+      "Display": "13.6-inch Liquid Retina",
+      "Weight": "2.7 pounds"
+    }
+  },
+  {
+    "Id": 3,
+    "name": "Sony WH-1000XM5",
+    "category": "Electronics",
+    "price": 399,
+    "description": "Industry-leading noise canceling headphones with exceptional sound quality and 30-hour battery life.",
+    "images": [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.6,
+    "stock": 42,
+    "specifications": {
+      "Driver": "30mm",
+      "Battery": "30 hours",
+      "Connectivity": "Bluetooth 5.2",
+      "Weight": "250g",
+      "Features": "Active Noise Cancelling"
+    }
+  },
+  {
+    "Id": 4,
+    "name": "Nike Air Jordan 1 Retro",
+    "category": "Fashion",
+    "price": 170,
+    "description": "Classic basketball shoe reimagined with premium materials and iconic design that never goes out of style.",
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.5,
+    "stock": 38,
+    "specifications": {
+      "Material": "Leather and synthetic",
+      "Sole": "Rubber outsole",
+      "Sizes": "6-13",
+      "Style": "High-top",
+      "Origin": "Vietnam"
+    }
+  },
+  {
+    "Id": 5,
+    "name": "Levi's 501 Original Jeans",
+    "category": "Fashion",
+    "price": 89,
+    "description": "The original blue jean since 1873. Straight fit with classic styling and premium denim construction.",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.4,
+    "stock": 67,
+    "specifications": {
+      "Fit": "Straight",
+      "Rise": "Mid-rise",
+      "Material": "100% Cotton",
+      "Wash": "Dark indigo",
+      "Sizes": "28-42"
+    }
+  },
+  {
+    "Id": 6,
+    "name": "Patagonia Better Sweater",
+    "category": "Fashion",
+    "price": 99,
+    "description": "Cozy fleece sweater made from recycled polyester with classic styling for outdoor adventures.",
+    "images": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.7,
+    "stock": 29,
+    "specifications": {
+      "Material": "100% Recycled Polyester",
+      "Fit": "Regular",
+      "Weight": "Lightweight",
+      "Features": "Quarter-zip, Stand-up collar",
+      "Care": "Machine washable"
+    }
+  },
+  {
+    "Id": 7,
+    "name": "West Elm Mid-Century Sofa",
+    "category": "Home",
+    "price": 1299,
+    "description": "Stylish mid-century modern sofa with clean lines, button tufting, and solid wood legs.",
+    "images": [
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.3,
+    "stock": 8,
+    "specifications": {
+      "Dimensions": "82\"w x 34\"d x 32\"h",
+      "Seating": "3-seat",
+      "Frame": "Kiln-dried hardwood",
+      "Upholstery": "Performance velvet",
+      "Assembly": "Required"
+    }
+  },
+  {
+    "Id": 8,
+    "name": "Cuisinart Coffee Maker",
+    "category": "Home",
+    "price": 149,
+    "description": "Programmable drip coffee maker with thermal carafe, auto-shutoff, and brew strength control.",
+    "images": [
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.2,
+    "stock": 34,
+    "specifications": {
+      "Capacity": "12 cups",
+      "Carafe": "Thermal stainless steel",
+      "Features": "Programmable, Auto-shutoff",
+      "Dimensions": "9.5\" x 7.5\" x 14\"",
+      "Power": "1050 watts"
+    }
+  },
+  {
+    "Id": 9,
+    "name": "Dyson V15 Detect",
+    "category": "Home",
+    "price": 749,
+    "description": "Powerful cordless vacuum with laser dust detection and intelligent suction adjustment.",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1574269910473-4a4bb1c62c87?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.6,
+    "stock": 18,
+    "specifications": {
+      "Runtime": "Up to 60 minutes",
+      "Bin Capacity": "0.2 gallons",
+      "Weight": "6.8 lbs",
+      "Features": "Laser detection, LCD screen",
+      "Warranty": "2 years"
+    }
+  },
+  {
+    "Id": 10,
+    "name": "Yeti Rambler Tumbler",
+    "category": "Sports",
+    "price": 35,
+    "description": "Insulated stainless steel tumbler that keeps drinks cold for hours with leak-resistant lid.",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1534412372779-b5dcc0e3f4c9?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.8,
+    "stock": 156,
+    "specifications": {
+      "Capacity": "30 oz",
+      "Material": "18/8 stainless steel",
+      "Insulation": "Double-wall vacuum",
+      "Lid": "MagSlider",
+      "Dishwasher": "Safe"
+    }
+  },
+  {
+    "Id": 11,
+    "name": "Peloton Bike+",
+    "category": "Sports",
+    "price": 2495,
+    "description": "Premium indoor exercise bike with rotating HD touchscreen and access to live and on-demand classes.",
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.4,
+    "stock": 5,
+    "specifications": {
+      "Screen": "23.8\" HD touchscreen",
+      "Resistance": "Magnetic",
+      "Dimensions": "59\" L x 23\" W x 53\" H",
+      "Weight": "135 lbs",
+      "Subscription": "Required for classes"
+    }
+  },
+  {
+    "Id": 12,
+    "name": "Wilson Tennis Racket",
+    "category": "Sports",
+    "price": 189,
+    "description": "Professional-grade tennis racket with advanced string pattern and comfortable grip for all skill levels.",
+    "images": [
+      "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.5,
+    "stock": 23,
+    "specifications": {
+      "Weight": "300g",
+      "Head Size": "100 sq in",
+      "String Pattern": "16x19",
+      "Grip Size": "4 1/4",
+      "Material": "Graphite composite"
+    }
+  },
+  {
+    "Id": 13,
+    "name": "Samsung 65\" QLED TV",
+    "category": "Electronics",
+    "price": 1899,
+    "description": "Premium 4K QLED smart TV with quantum dot technology, HDR support, and built-in streaming apps.",
+    "images": [
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.5,
+    "stock": 12,
+    "specifications": {
+      "Size": "65 inches",
+      "Resolution": "4K UHD (3840x2160)",
+      "Technology": "QLED",
+      "Smart TV": "Tizen OS",
+      "HDR": "HDR10+, HLG"
+    }
+  },
+  {
+    "Id": 14,
+    "name": "Adidas Ultraboost 22",
+    "category": "Fashion",
+    "price": 180,
+    "description": "Premium running shoe with responsive Boost midsole and Primeknit upper for ultimate comfort.",
+    "images": [
+      "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.6,
+    "stock": 44,
+    "specifications": {
+      "Upper": "Primeknit",
+      "Midsole": "Boost technology",
+      "Outsole": "Continental rubber",
+      "Drop": "10mm",
+      "Weight": "310g"
+    }
+  },
+  {
+    "Id": 15,
+    "name": "KitchenAid Stand Mixer",
+    "category": "Home",
+    "price": 379,
+    "description": "Professional 5-quart stand mixer with 10-speed settings and dishwasher-safe bowl.",
+    "images": [
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=400&fit=crop&crop=center"
+    ],
+    "rating": 4.7,
+    "stock": 27,
+    "specifications": {
+      "Capacity": "5 quart",
+      "Speeds": "10",
+      "Power": "325 watts",
+      "Attachments": "Dough hook, flat beater, wire whip",
+      "Material": "Tilt-head design"
+    }
+  }
+]

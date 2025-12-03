@@ -1,0 +1,87 @@
+[
+  {
+    "Id": 1,
+    "items": [
+      {
+        "productId": 1,
+        "name": "iPhone 15 Pro Max",
+        "price": 1199,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=100&h=100&fit=crop&crop=center"
+      }
+    ],
+    "total": 1199,
+    "status": "Processing",
+    "shippingAddress": {
+      "fullName": "John Doe",
+      "addressLine1": "123 Main Street",
+      "addressLine2": "Apt 4B",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102",
+      "phone": "+1 (555) 123-4567"
+    },
+    "paymentMethod": "Credit Card ending in 4242",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "estimatedDelivery": "2024-01-22T17:00:00Z"
+  },
+  {
+    "Id": 2,
+    "items": [
+      {
+        "productId": 4,
+        "name": "Nike Air Jordan 1 Retro",
+        "price": 170,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&h=100&fit=crop&crop=center"
+      },
+      {
+        "productId": 10,
+        "name": "Yeti Rambler Tumbler",
+        "price": 35,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=100&h=100&fit=crop&crop=center"
+      }
+    ],
+    "total": 240,
+    "status": "Shipped",
+    "shippingAddress": {
+      "fullName": "John Doe",
+      "addressLine1": "123 Main Street",
+      "addressLine2": "Apt 4B",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102",
+      "phone": "+1 (555) 123-4567"
+    },
+    "paymentMethod": "UPI Payment",
+    "createdAt": "2024-01-10T14:45:00Z",
+    "estimatedDelivery": "2024-01-17T17:00:00Z"
+  },
+  {
+    "Id": 3,
+    "items": [
+      {
+        "productId": 8,
+        "name": "Cuisinart Coffee Maker",
+        "price": 149,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=100&h=100&fit=crop&crop=center"
+      }
+    ],
+    "total": 149,
+    "status": "Delivered",
+    "shippingAddress": {
+      "fullName": "John Doe",
+      "addressLine1": "123 Main Street",
+      "addressLine2": "Apt 4B",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102",
+      "phone": "+1 (555) 123-4567"
+    },
+    "paymentMethod": "Credit Card ending in 4242",
+    "createdAt": "2024-01-05T09:15:00Z",
+    "estimatedDelivery": "2024-01-12T17:00:00Z"
+  }
+]
