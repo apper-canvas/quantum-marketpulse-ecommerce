@@ -9,7 +9,7 @@ export const useCart = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const loadCart = async () => {
+const loadCart = async () => {
     try {
       setLoading(true);
       setError("");
@@ -17,7 +17,7 @@ export const useCart = () => {
       setCart(cartData);
       
       // Enrich cart data with product information
-      if (cartData.length > 0) {
+      if (cartData && cartData.length > 0) {
         const enrichedItems = await Promise.all(
           cartData.map(async (item) => {
             try {
@@ -28,16 +28,23 @@ export const useCart = () => {
               };
             } catch (err) {
               console.error(`Failed to load product ${item.productId}:`, err);
-              return null;
+              // Return item without product data rather than null
+              return {
+                ...item,
+                product: null
+              };
             }
           })
         );
-        setCartItems(enrichedItems.filter(item => item !== null));
+        // Filter out items where product loading failed and product is null
+        const validItems = enrichedItems.filter(item => item.product !== null);
+        setCartItems(validItems);
       } else {
         setCartItems([]);
       }
     } catch (err) {
       setError("Failed to load cart");
+      setCartItems([]); // Ensure cartItems is reset on error
       console.error("Cart loading error:", err);
     } finally {
       setLoading(false);

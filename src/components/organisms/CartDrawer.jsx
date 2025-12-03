@@ -10,10 +10,9 @@ import { useCart } from "@/hooks/useCart";
 
 const CartDrawer = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
-  const { cartItems, loading, getCartTotal, clearCart } = useCart();
+  const { cartItems, loading, error, getCartTotal, clearCart } = useCart();
 
   const cartTotal = getCartTotal();
-
   const handleCheckout = () => {
     onClose();
     navigate("/checkout");
@@ -59,10 +58,16 @@ const CartDrawer = ({ isOpen, onClose }) => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 overflow-y-auto">
+<div className="flex-1 overflow-y-auto">
               {loading ? (
                 <div className="p-6">
                   <Loading message="Loading cart..." />
+                </div>
+              ) : error ? (
+                <div className="p-6">
+                  <div className="text-red-500 text-center">
+                    <p>{error}</p>
+                  </div>
                 </div>
               ) : cartItems.length === 0 ? (
                 <div className="h-full flex items-center justify-center p-6">
