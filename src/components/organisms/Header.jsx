@@ -27,9 +27,10 @@ const Header = () => {
     setIsCartOpen(true);
   };
 
-  const navLinks = [
+const navLinks = [
     { name: "Home", href: "/" },
     { name: "Categories", href: "/categories" },
+    { name: "Wishlist", href: "/wishlist" },
     { name: "Orders", href: "/orders" }
   ];
 

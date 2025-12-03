@@ -4,11 +4,15 @@ import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 import StarRating from "@/components/atoms/StarRating";
 import { useCart } from "@/hooks/useCart";
+import { useWishlist } from "@/hooks/useWishlist";
 import { motion } from "framer-motion";
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
+  const { isInWishlist, toggleWishlist } = useWishlist();
+
+  const isWishlisted = isInWishlist(product.Id);
 
   const handleViewProduct = () => {
     navigate(`/product/${product.Id}`);
@@ -17,6 +21,11 @@ const ProductCard = ({ product }) => {
   const handleAddToCart = (e) => {
     e.stopPropagation();
     addToCart(product.Id, 1);
+  };
+
+  const handleWishlistToggle = (e) => {
+    e.stopPropagation();
+    toggleWishlist(product.Id);
   };
 
   return (
@@ -34,7 +43,21 @@ const ProductCard = ({ product }) => {
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
         />
-        
+{/* Wishlist Button */}
+        <button
+          onClick={handleWishlistToggle}
+          className="absolute top-2 right-2 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-white transition-all duration-200 z-10"
+        >
+          <ApperIcon 
+            name="Heart" 
+            className={`w-4 h-4 transition-colors ${
+              isWishlisted 
+                ? 'text-red-500 fill-current' 
+                : 'text-gray-600 hover:text-red-500'
+            }`}
+          />
+        </button>
+
         {/* Quick View Button */}
         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <Button
