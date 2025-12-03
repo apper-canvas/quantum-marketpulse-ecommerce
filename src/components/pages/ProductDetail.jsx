@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import ApperIcon from "@/components/ApperIcon";
-import Button from "@/components/atoms/Button";
-import StarRating from "@/components/atoms/StarRating";
-import Badge from "@/components/atoms/Badge";
-import ProductGrid from "@/components/organisms/ProductGrid";
-import Loading from "@/components/ui/Loading";
-import ErrorView from "@/components/ui/ErrorView";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { productService } from "@/services/api/productService";
 import { useCart } from "@/hooks/useCart";
 import { motion } from "framer-motion";
+import ApperIcon from "@/components/ApperIcon";
+import Loading from "@/components/ui/Loading";
+import ErrorView from "@/components/ui/ErrorView";
+import StarRating from "@/components/atoms/StarRating";
+import Button from "@/components/atoms/Button";
+import Badge from "@/components/atoms/Badge";
+import ProductGrid from "@/components/organisms/ProductGrid";
+import Home from "@/components/pages/Home";
+import { toast } from "react-hot-toast";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -59,15 +61,37 @@ const ProductDetail = () => {
   }, [id]);
 
 const handleAddToCart = async () => {
-    if (product && !addingToCart) {
-      try {
-        setAddingToCart(true);
-        await addToCart(product.Id, quantity);
-      } catch (error) {
-        console.error('Error adding to cart:', error);
-      } finally {
-        setAddingToCart(false);
+    if (!product) {
+      toast.error('Product information not available');
+      return;
+    }
+    
+    if (addingToCart) {
+      return; // Prevent duplicate requests
+    }
+    
+    if (isOutOfStock) {
+      toast.error('Product is out of stock');
+      return;
+    }
+
+    try {
+      setAddingToCart(true);
+      await addToCart(product.Id, quantity);
+      // Success toast is handled by the useCart hook
+      // Add visual feedback with cart animation
+      const button = document.querySelector('[data-cart-button]');
+      if (button) {
+        button.classList.add('animate-bounce-cart');
+        setTimeout(() => {
+          button.classList.remove('animate-bounce-cart');
+        }, 600);
       }
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+      toast.error('Failed to add item to cart. Please try again.');
+    } finally {
+      setAddingToCart(false);
     }
   };
 
@@ -231,17 +255,18 @@ const handleAddToCart = async () => {
               </div>
             </div>
 
-            {/* Action Buttons */}
-<div className="space-y-3 pt-4">
+{/* Action Buttons */}
+            <div className="space-y-3 pt-4">
               <div className="flex space-x-4">
                 <Button
                   onClick={handleAddToCart}
                   disabled={isOutOfStock || addingToCart}
                   className="flex-1"
                   size="lg"
+                  data-cart-button
                 >
                   <ApperIcon name="ShoppingCart" className="w-5 h-5 mr-2" />
-                  {addingToCart ? "Adding..." : "Add to Cart"}
+                  {addingToCart ? "Adding..." : isOutOfStock ? "Out of Stock" : "Add to Cart"}
                 </Button>
                 
                 <Button
