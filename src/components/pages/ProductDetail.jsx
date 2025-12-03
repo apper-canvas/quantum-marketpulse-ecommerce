@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { productService } from "@/services/api/productService";
 import { useCart } from "@/hooks/useCart";
-import { motion } from "framer-motion";
+import { useWishlist } from "@/hooks/useWishlist";
+import { toast } from "react-toastify";
 import ApperIcon from "@/components/ApperIcon";
 import Loading from "@/components/ui/Loading";
 import ErrorView from "@/components/ui/ErrorView";
@@ -11,7 +12,6 @@ import Button from "@/components/atoms/Button";
 import Badge from "@/components/atoms/Badge";
 import ProductGrid from "@/components/organisms/ProductGrid";
 import Home from "@/components/pages/Home";
-import { toast } from "react-toastify";
 
 const ProductDetail = () => {
   const { id } = useParams();
