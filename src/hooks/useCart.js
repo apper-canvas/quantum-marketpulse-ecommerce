@@ -88,14 +88,14 @@ export const useCart = () => {
     }
   };
 
-  const getCartTotal = () => {
+const getCartTotal = () => {
     return cartItems.reduce((total, item) => {
       return total + (item.product.price * item.quantity);
     }, 0);
   };
 
   const getCartCount = () => {
-    return cart.reduce((total, item) => total + item.quantity, 0);
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
   useEffect(() => {
