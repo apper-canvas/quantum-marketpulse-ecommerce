@@ -23,7 +23,7 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [relatedLoading, setRelatedLoading] = useState(false);
-
+  const [addingToCart, setAddingToCart] = useState(false);
   const loadProduct = async () => {
     if (!id) return;
     
@@ -58,9 +58,16 @@ const ProductDetail = () => {
     loadProduct();
   }, [id]);
 
-  const handleAddToCart = () => {
-    if (product) {
-      addToCart(product.Id, quantity);
+const handleAddToCart = async () => {
+    if (product && !addingToCart) {
+      try {
+        setAddingToCart(true);
+        await addToCart(product.Id, quantity);
+      } catch (error) {
+        console.error('Error adding to cart:', error);
+      } finally {
+        setAddingToCart(false);
+      }
     }
   };
 
@@ -225,16 +232,16 @@ const ProductDetail = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="space-y-3 pt-4">
+<div className="space-y-3 pt-4">
               <div className="flex space-x-4">
                 <Button
                   onClick={handleAddToCart}
-                  disabled={isOutOfStock}
+                  disabled={isOutOfStock || addingToCart}
                   className="flex-1"
                   size="lg"
                 >
                   <ApperIcon name="ShoppingCart" className="w-5 h-5 mr-2" />
-                  Add to Cart
+                  {addingToCart ? "Adding..." : "Add to Cart"}
                 </Button>
                 
                 <Button
