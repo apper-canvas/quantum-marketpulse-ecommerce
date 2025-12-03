@@ -11,7 +11,7 @@ import Button from "@/components/atoms/Button";
 import Badge from "@/components/atoms/Badge";
 import ProductGrid from "@/components/organisms/ProductGrid";
 import Home from "@/components/pages/Home";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -62,7 +62,7 @@ const ProductDetail = () => {
 
 const handleAddToCart = async () => {
     if (!product) {
-      toast.error('Product information not available');
+toast.error('Product information not available');
       return;
     }
     
@@ -71,7 +71,7 @@ const handleAddToCart = async () => {
     }
     
     if (isOutOfStock) {
-      toast.error('Product is out of stock');
+toast.error('Product is out of stock');
       return;
     }
 
@@ -89,7 +89,7 @@ const handleAddToCart = async () => {
       }
     } catch (error) {
       console.error('Error adding to cart:', error);
-      toast.error('Failed to add item to cart. Please try again.');
+toast.error('Failed to add item to cart. Please try again.');
     } finally {
       setAddingToCart(false);
     }
