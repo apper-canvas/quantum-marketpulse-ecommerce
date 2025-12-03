@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router-dom";
 import { productService } from "@/services/api/productService";
 import { useCart } from "@/hooks/useCart";
